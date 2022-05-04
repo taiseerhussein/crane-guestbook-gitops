@@ -1,0 +1,54 @@
+apiVersion: v1
+data:
+  service-ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDUTCCAjmgAwIBAgIIZCI/lNFuPEYwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UE
+    Awwrb3BlbnNoaWZ0LXNlcnZpY2Utc2VydmluZy1zaWduZXJAMTY1MTU5NDQ1MzAe
+    Fw0yMjA1MDMxNjE0MTJaFw0yNDA3MDExNjE0MTNaMDYxNDAyBgNVBAMMK29wZW5z
+    aGlmdC1zZXJ2aWNlLXNlcnZpbmctc2lnbmVyQDE2NTE1OTQ0NTMwggEiMA0GCSqG
+    SIb3DQEBAQUAA4IBDwAwggEKAoIBAQD1zOydSC3fO0LR90FBUGfOuH/GjjqCJoio
+    0QcDXRgSeFFc4Fkq/4CDqpsCArBcYtO5bfadIce/XHRe6iKV2I8tcLVsm3ue3kTS
+    LWrUveL//3TXFCAXRmYn4To2J5DSehriRyuNzrwCSs3BdYphRRVIEyMzlkNtyikc
+    +KqtGvcXJZm+lnguuZf30QXkEBUtAT/9zjLiYy5q9tdREMf7RHGeZCx5/Duva/Nn
+    WKe8VE/lgvB1h+Q81vYAQiCfuDi2LbTmFWKa7RkDcIRU1fLZqXMuuINgoiwWHDWb
+    tkVccJXC7Nqn6uw5N6vdeHcgQOkB+C9JhpO77BX0eGjYCK6CtE7pAgMBAAGjYzBh
+    MA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTxQCwv
+    NfQAcxWODm2sIFPi3y16vjAfBgNVHSMEGDAWgBTxQCwvNfQAcxWODm2sIFPi3y16
+    vjANBgkqhkiG9w0BAQsFAAOCAQEALYqcQtBO5eSwMip6BbTAwZtYOdOEBX0zDdr7
+    BSNz3IileXGpuIQ7ocTTNVqYkSwDANS79upPnpMTH66EP9ops/JfTQ+1vpnBhkhg
+    4bDoppd/AdooPlenF+Vpho9le3mt0Wakjfth//OXb5grEnUCnvpL4Mh+idmJ5uWP
+    +Qqx2oaPmiA2+ksX/dxjozhjIroko1Z3sfpnlHBP9Gspm9R0rLBkHvtUSoTVqrFR
+    5C8vcGwdIwDM1M3hqVf1JxQqZrDdv+jZkn4J+KjoWNRE6oRC/BO2p1COSo2iXGyk
+    z6J+YpP3vWR+1ktkDT//4CWTJ/PeMmq/kUHqdEt1WIVg8P3obA==
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  labels:
+    app.kubernetes.io/part-of: tekton-pipelines
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/part-of: {}
+    manager: openshift-pipelines-operator
+    operation: Update
+    time: "2022-05-04T16:34:19Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:service-ca.crt: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2022-05-04T16:34:19Z"
+  name: config-service-cabundle
+  namespace: guestbook

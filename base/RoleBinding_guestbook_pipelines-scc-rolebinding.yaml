@@ -1,0 +1,26 @@
+apiVersion: authorization.openshift.io/v1
+groupNames: null
+kind: RoleBinding
+metadata:
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: openshift-pipelines-operator
+    operation: Update
+    time: "2022-05-04T16:34:19Z"
+  name: pipelines-scc-rolebinding
+  namespace: guestbook
+roleRef:
+  name: pipelines-scc-clusterrole
+subjects:
+- kind: ServiceAccount
+  name: pipeline
+  namespace: guestbook
+userNames:
+- system:serviceaccount:guestbook:pipeline

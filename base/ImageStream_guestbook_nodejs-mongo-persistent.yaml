@@ -1,0 +1,8 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: nodejs-mongo-persistent
+  namespace: guestbook
+spec:
+  lookupPolicy:
+    local: false

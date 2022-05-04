@@ -1,0 +1,212 @@
+apiVersion: image.openshift.io/v1
+image:
+  dockerImageLayers:
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:a03401a44180b6581a149376d6fd2d5bd85d938445fd5b5ad270e14ddde4937c
+    size: 76244414
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:bb0da44cdbced801240e74437a617d4fe0e39c29cf3bbabb7f6a96d2620cfeaa
+    size: 1730
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:f8a8d6ccf58e36e557a55b57a44daa973c61a637be5cab2fb38e3c9b737151df
+    size: 7215271
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:dd3691704af8eb0ef955519328f2e6852ba398b0e316255913e2bfa0e6e57a4b
+    size: 87866297
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:f88f4a7ade515bf5e747ca6212f57c192034ffc0fbd46eaa3774524edee60083
+    size: 25361200
+  - mediaType: application/vnd.docker.image.rootfs.diff.tar.gzip
+    name: sha256:2115f7623364b0b447ce74dd67790d2db6ec651e5a045d40c1c0ecdb910aede6
+    size: 2023608
+  dockerImageManifestMediaType: application/vnd.docker.distribution.manifest.v2+json
+  dockerImageMetadata:
+    Architecture: amd64
+    Config:
+      Cmd:
+      - /usr/libexec/s2i/run
+      Entrypoint:
+      - container-entrypoint
+      Env:
+      - OPENSHIFT_BUILD_NAME=nodejs-mongo-persistent-1
+      - OPENSHIFT_BUILD_NAMESPACE=guestbook
+      - OPENSHIFT_BUILD_SOURCE=https://github.com/sclorg/nodejs-ex.git
+      - OPENSHIFT_BUILD_COMMIT=b27dd9e9ffe53f76a1407d4fe357cf64c8a0ac6f
+      - NPM_MIRROR=
+      - PATH=/opt/app-root/src/node_modules/.bin/:/opt/app-root/src/.npm-global/bin/:/opt/app-root/src/bin:/opt/app-root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - container=oci
+      - SUMMARY=Platform for building and running Node.js 8 applications
+      - DESCRIPTION=Node.js 8 available as container is a base platform for building
+        and running various Node.js 8 applications and frameworks. Node.js is a platform
+        built on Chrome's JavaScript runtime for easily building fast, scalable network
+        applications. Node.js uses an event-driven, non-blocking I/O model that makes
+        it lightweight and efficient, perfect for data-intensive real-time applications
+        that run across distributed devices.
+      - STI_SCRIPTS_URL=image:///usr/libexec/s2i
+      - STI_SCRIPTS_PATH=/usr/libexec/s2i
+      - APP_ROOT=/opt/app-root
+      - HOME=/opt/app-root/src
+      - PLATFORM=el7
+      - BASH_ENV=/opt/app-root/etc/scl_enable
+      - ENV=/opt/app-root/etc/scl_enable
+      - PROMPT_COMMAND=. /opt/app-root/etc/scl_enable
+      - NODEJS_SCL=rh-nodejs10
+      - NODEJS_VERSION=8
+      - NPM_RUN=start
+      - NAME=nodejs
+      - NPM_CONFIG_PREFIX=/opt/app-root/src/.npm-global
+      ExposedPorts:
+        8080/tcp: {}
+      Labels:
+        architecture: x86_64
+        build-date: 2020-06-22T10:01:08.845792
+        com.redhat.build-host: cpt-1002.osbs.prod.upshift.rdu2.redhat.com
+        com.redhat.component: rh-nodejs8-container
+        com.redhat.deployments-dir: /opt/app-root/src
+        com.redhat.dev-mode: DEV_MODE:false
+        com.redhat.dev-mode.port: DEBUG_PORT:5858
+        com.redhat.license_terms: https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI
+        description: Node.js 8 available as container is a base platform for building
+          and running various Node.js 8 applications and frameworks. Node.js is a
+          platform built on Chrome's JavaScript runtime for easily building fast,
+          scalable network applications. Node.js uses an event-driven, non-blocking
+          I/O model that makes it lightweight and efficient, perfect for data-intensive
+          real-time applications that run across distributed devices.
+        distribution-scope: public
+        help: For more information visit https://github.com/sclorg/s2i-nodejs-container
+        io.k8s.description: Node.js 8 available as container is a base platform for
+          building and running various Node.js 8 applications and frameworks. Node.js
+          is a platform built on Chrome's JavaScript runtime for easily building fast,
+          scalable network applications. Node.js uses an event-driven, non-blocking
+          I/O model that makes it lightweight and efficient, perfect for data-intensive
+          real-time applications that run across distributed devices.
+        io.k8s.display-name: temp.builder.openshift.io/guestbook/nodejs-mongo-persistent-1:85f4e9cd
+        io.openshift.build.commit.author: Lucas Holmquist <lholmqui@redhat.com>
+        io.openshift.build.commit.date: Thu Oct 21 13:29:44 2021 -0400
+        io.openshift.build.commit.id: b27dd9e9ffe53f76a1407d4fe357cf64c8a0ac6f
+        io.openshift.build.commit.message: 'chore: remove the reference to node 10
+          and start using ubi images'
+        io.openshift.build.commit.ref: master
+        io.openshift.build.image: docker-registry.default.svc:5000/openshift/nodejs@sha256:fe6d5c86580ad8db28aa5a112709917aa66e7026ae866adeab4b2973cdd6c598
+        io.openshift.build.source-location: https://github.com/sclorg/nodejs-ex.git
+        io.openshift.expose-services: 8080:http
+        io.openshift.s2i.scripts-url: image:///usr/libexec/s2i
+        io.openshift.tags: builder,nodejs,nodejs8
+        io.s2i.scripts-url: image:///usr/libexec/s2i
+        maintainer: SoftwareCollections.org <sclorg@redhat.com>
+        name: rhscl/nodejs-8-rhel7
+        release: "61"
+        summary: Platform for building and running Node.js 8 applications
+        url: https://access.redhat.com/containers/#/registry.access.redhat.com/rhscl/nodejs-8-rhel7/images/1-61
+        usage: s2i build <SOURCE-REPOSITORY> rhscl/nodejs-8-rhel7:latest <APP-NAME>
+        vcs-ref: 5eb024c6c8f478a450f2c61326a37a4335278c10
+        vcs-type: git
+        vendor: Red Hat, Inc.
+        version: "1"
+      User: "1001"
+      WorkingDir: /opt/app-root/src
+    Container: f67b2c5f20cf760985e7449514665a70f03f204d2849d9241b5f85d98dee512d
+    ContainerConfig:
+      AttachStdout: true
+      Cmd:
+      - /bin/sh
+      - -c
+      - tar -C /tmp -xf - && /usr/libexec/s2i/assemble
+      Entrypoint:
+      - container-entrypoint
+      Env:
+      - OPENSHIFT_BUILD_NAME=nodejs-mongo-persistent-1
+      - OPENSHIFT_BUILD_NAMESPACE=guestbook
+      - OPENSHIFT_BUILD_SOURCE=https://github.com/sclorg/nodejs-ex.git
+      - OPENSHIFT_BUILD_COMMIT=b27dd9e9ffe53f76a1407d4fe357cf64c8a0ac6f
+      - NPM_MIRROR=
+      - PATH=/opt/app-root/src/node_modules/.bin/:/opt/app-root/src/.npm-global/bin/:/opt/app-root/src/bin:/opt/app-root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - container=oci
+      - SUMMARY=Platform for building and running Node.js 8 applications
+      - DESCRIPTION=Node.js 8 available as container is a base platform for building
+        and running various Node.js 8 applications and frameworks. Node.js is a platform
+        built on Chrome's JavaScript runtime for easily building fast, scalable network
+        applications. Node.js uses an event-driven, non-blocking I/O model that makes
+        it lightweight and efficient, perfect for data-intensive real-time applications
+        that run across distributed devices.
+      - STI_SCRIPTS_URL=image:///usr/libexec/s2i
+      - STI_SCRIPTS_PATH=/usr/libexec/s2i
+      - APP_ROOT=/opt/app-root
+      - HOME=/opt/app-root/src
+      - PLATFORM=el7
+      - BASH_ENV=/opt/app-root/etc/scl_enable
+      - ENV=/opt/app-root/etc/scl_enable
+      - PROMPT_COMMAND=. /opt/app-root/etc/scl_enable
+      - NODEJS_SCL=rh-nodejs10
+      - NODEJS_VERSION=8
+      - NPM_RUN=start
+      - NAME=nodejs
+      - NPM_CONFIG_PREFIX=/opt/app-root/src/.npm-global
+      ExposedPorts:
+        8080/tcp: {}
+      Hostname: nodejs-mongo-persistent-1-build
+      Image: docker-registry.default.svc:5000/openshift/nodejs@sha256:fe6d5c86580ad8db28aa5a112709917aa66e7026ae866adeab4b2973cdd6c598
+      Labels:
+        architecture: x86_64
+        build-date: 2020-06-22T10:01:08.845792
+        com.redhat.build-host: cpt-1002.osbs.prod.upshift.rdu2.redhat.com
+        com.redhat.component: rh-nodejs8-container
+        com.redhat.deployments-dir: /opt/app-root/src
+        com.redhat.dev-mode: DEV_MODE:false
+        com.redhat.dev-mode.port: DEBUG_PORT:5858
+        com.redhat.license_terms: https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI
+        description: Node.js 8 available as container is a base platform for building
+          and running various Node.js 8 applications and frameworks. Node.js is a
+          platform built on Chrome's JavaScript runtime for easily building fast,
+          scalable network applications. Node.js uses an event-driven, non-blocking
+          I/O model that makes it lightweight and efficient, perfect for data-intensive
+          real-time applications that run across distributed devices.
+        distribution-scope: public
+        help: For more information visit https://github.com/sclorg/s2i-nodejs-container
+        io.k8s.description: Node.js 8 available as container is a base platform for
+          building and running various Node.js 8 applications and frameworks. Node.js
+          is a platform built on Chrome's JavaScript runtime for easily building fast,
+          scalable network applications. Node.js uses an event-driven, non-blocking
+          I/O model that makes it lightweight and efficient, perfect for data-intensive
+          real-time applications that run across distributed devices.
+        io.k8s.display-name: Node.js 8
+        io.openshift.expose-services: 8080:http
+        io.openshift.s2i.scripts-url: image:///usr/libexec/s2i
+        io.openshift.tags: builder,nodejs,nodejs8
+        io.s2i.scripts-url: image:///usr/libexec/s2i
+        maintainer: SoftwareCollections.org <sclorg@redhat.com>
+        name: rhscl/nodejs-8-rhel7
+        release: "61"
+        summary: Platform for building and running Node.js 8 applications
+        url: https://access.redhat.com/containers/#/registry.access.redhat.com/rhscl/nodejs-8-rhel7/images/1-61
+        usage: s2i build <SOURCE-REPOSITORY> rhscl/nodejs-8-rhel7:latest <APP-NAME>
+        vcs-ref: 5eb024c6c8f478a450f2c61326a37a4335278c10
+        vcs-type: git
+        vendor: Red Hat, Inc.
+        version: "1"
+      OpenStdin: true
+      StdinOnce: true
+      User: "1001"
+      WorkingDir: /opt/app-root/src
+    Created: "2022-05-04T16:03:00Z"
+    DockerVersion: 1.13.1
+    Id: sha256:ded1e983b9782d2e63c2359f7856805ea3640c3a652fc6e19a73cf9ee13f513d
+    Size: 198722069
+    apiVersion: image.openshift.io/1.0
+    kind: DockerImage
+  dockerImageMetadataVersion: "1.0"
+  dockerImageReference: image-registry.openshift-image-registry.svc:5000/guestbook/nodejs-mongo-persistent@sha256:583fac80abbcaea9e187b118e3710d7bd8fb00449bb7e425de6701730f71d250
+  metadata:
+    annotations:
+      image.openshift.io/dockerLayersOrder: ascending
+      image.openshift.io/manifestBlobStored: "true"
+      openshift.io/image.managed: "true"
+    creationTimestamp: "2022-05-04T16:34:31Z"
+    name: sha256:583fac80abbcaea9e187b118e3710d7bd8fb00449bb7e425de6701730f71d250
+    resourceVersion: "622516"
+    uid: c50c31ec-4ff1-42d1-bcb1-3e6243656739
+kind: ImageTag
+metadata:
+  name: nodejs-mongo-persistent:latest
+  namespace: guestbook
+spec: null

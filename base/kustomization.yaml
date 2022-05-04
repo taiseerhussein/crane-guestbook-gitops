@@ -1,0 +1,33 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- Secret_guestbook_deployer-token-v7zdz.yaml
+- ServiceAccount_guestbook_default.yaml
+- Secret_guestbook_deployer-token-s8ps8.yaml
+- Secret_guestbook_builder-token-f4xtd.yaml
+- ClusterServiceVersion_guestbook_openshift-gitops-operator.v1.4.6.yaml
+- ImageTag_guestbook_nodejs-mongo-persistent:latest.yaml
+- ConfigMap_guestbook_kube-root-ca.crt.yaml
+- ImageStreamTag_guestbook_nodejs-mongo-persistent:latest.yaml
+- Secret_guestbook_default-token-nklwt.yaml
+- Secret_guestbook_pipeline-token-dxcrp.yaml
+- RoleBinding_guestbook_edit.yaml
+- ServiceAccount_guestbook_deployer.yaml
+- Secret_guestbook_default-token-9sdn6.yaml
+- ConfigMap_guestbook_config-trusted-cabundle.yaml
+- Secret_guestbook_builder-token-xmfqc.yaml
+- ServiceAccount_guestbook_builder.yaml
+- RoleBinding_guestbook_system:image-pullers.yaml
+- Secret_guestbook_deployer-dockercfg-d4fgf.yaml
+- ConfigMap_guestbook_config-service-cabundle.yaml
+- Secret_guestbook_pipeline-token-rctxn.yaml
+- Secret_guestbook_pipeline-dockercfg-g5vvc.yaml
+- RoleBinding_guestbook_system:deployers.yaml
+- ClusterServiceVersion_guestbook_redhat-openshift-pipelines.v1.4.1.yaml
+- ImageStream_guestbook_nodejs-mongo-persistent.yaml
+- RoleBinding_guestbook_system:image-builders.yaml
+- ServiceAccount_guestbook_pipeline.yaml
+- RoleBinding_guestbook_pipelines-scc-rolebinding.yaml
+- Secret_guestbook_default-dockercfg-2cnkf.yaml
+- Secret_guestbook_builder-dockercfg-6lnck.yaml
